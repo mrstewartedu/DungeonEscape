@@ -1,0 +1,27 @@
+version 0.1 - core gameplay
+Player movement
+Goblin AI
+Health system
+Invincibility frames
+Key pickup
+
+version 0.2
+Door object
+Door collision
+Door only opens with key
+Victory screen
+Restart after victory
+
+version 0.3
+Tile map
+Walls
+Collision against walls
+Nicer level
+
+version 0.4
+Second goblin
+Better AI
+Spawn positions
+
+version 0.5
+Three handcrafted levels

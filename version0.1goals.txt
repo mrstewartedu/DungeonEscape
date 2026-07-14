@@ -1,0 +1,15 @@
+What I would add before publishing
+
+I'd probably aim for this checklist:
+
+✔ Player movement
+✔ Goblin follows player
+✔ Health
+✔ Invincibility frames
+✔ Key pickup
+✔ Door unlocks with key
+✔ Win screen
+✔ Restart
+✔ Two or three handcrafted levels
+
+At that point I'd happily call it Version 0.1 and put it online.
