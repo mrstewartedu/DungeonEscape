@@ -33,7 +33,6 @@ start_time = time.time()
 health_remaining = 50
 last_hit_time = 0
 has_key = False
-current_map = (0,0)
 
 # -----------------
 # Cast draw size and colour
@@ -41,6 +40,7 @@ current_map = (0,0)
 player = Rect((320, 180), (32, 32))
 key = Rect((100, 100), (32, 32))
 monster = Rect((180, 320), (32, 32))
+
 
 # -----------------
 # Helper Functions
@@ -97,16 +97,8 @@ def check_collisions():
         
             health_remaining -= 10 # How do I handle different sources of damage with different values
             last_hit_time = time.time()
-    
-    if player.colliderect(door_00.rect):
-        print("Touching door")
 
-    if door_00.locked and has_key:
-        if keyboard.f:
-            door_00.unlock()
-            print("door unlocked")
-
-    if health_remaining <=0:
+        if health_remaining <=0:
             game_over = True
 
 def end_game():
@@ -139,10 +131,7 @@ def hunt(): # Moves the monster toward the player
 def draw():
     screen.clear()
     screen.fill(BLACK)
-    screen.draw.filled_rect(
-    door_00.rect,
-    door_00.get_colour()
-)
+
     # If the game has ended, only draw the Game Over screen
     if game_over:
         screen.draw.text(
@@ -185,7 +174,7 @@ def draw():
     screen.draw.text(
         f"Health: {health_remaining}",
         (120, 10),
-        color="green",
+        color="white",
         fontsize=30
     )
 
@@ -217,43 +206,3 @@ def update():
     keep_player_on_screen()
     check_collisions()
     hunt()
-
-class Door:
-
-    def __init__(self, position, destination_map, destination_position):
-        self.rect = Rect(position, (32,32))
-        self.locked = True
-        self.destination_map = destination_map
-        self.destination_position = destination_position
-
-
-    def unlock(self):
-        self.locked = False
-
-
-    def get_colour(self):  # The door determines its color based upon its locked status
-        if self.locked:
-            return RED
-        else:
-            return GREEN
-
-
-    def enter(self):
-        print("Entering door")
-        print("Destination:", self.destination_map)
-        
-    
-
-# Map (0, 0)
-# -----------------
-door_00 = Door(
-    position=(200,200),
-    destination_map=(1,0),
-    destination_position=(200,300),
-    )
-
-# -----------------
-# Start the game
-# -----------------
-
-pgzrun.go()

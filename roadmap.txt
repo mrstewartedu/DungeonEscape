@@ -1,3 +1,12 @@
+Dungeon Escape Road Map
+
+v0.1  Player movement
+v0.2  Enemy follows player
+v0.3  Health and damage
+v0.4  Key, restart, invincibility frames  ← current
+v0.5  Doors and levels                 ← next
+Is the above true? idk but I like the format.
+
 version 0.1 - core gameplay
 Player movement
 Goblin AI

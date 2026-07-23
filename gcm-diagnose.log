@@ -1,0 +1,211 @@
+﻿Diagnose log at 2026-07-19T05:36:19Z
+
+AppPath: C:\Program Files\Git\mingw64\bin\git-credential-manager.exe
+InstallDir: C:\Program Files\Git\mingw64\bin\
+Version: 2.8.0+d5e8a3442d48cc5efe7014e093e44242c0bd395f
+
+------------
+Diagnostic: Environment
+Skipped: False
+Success: True
+Exception: None
+Log:
+OSType: Windows
+OSVersion: 10.0 (build 26200)
+Reading environment variables... OK
+ Variables:
+ORIGINAL_TMP=C:/Users/ice9t/AppData/Local/Temp
+ProgramFiles(x86)=C:\Program Files (x86)
+MSYSTEM=MINGW64
+ProgramW6432=C:\Program Files
+EXEPATH=C:\Program Files\Git
+ORIGINAL_PATH=C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ice9t\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\wureset;C:\Program Files\wooting-analog-sdk;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Git\cmd;C:\Users\ice9t\AppData\Local\Programs\Python\Python313\Scripts;C:\Users\ice9t\AppData\Local\Programs\Microsoft VS Code\bin
+PKG_CONFIG_SYSTEM_LIBRARY_PATH=C:/Program Files/Git/mingw64/lib
+APPDATA=C:\Users\ice9t\AppData\Roaming
+TMP=C:\Users\ice9t\AppData\Local\Temp
+PROCESSOR_ARCHITECTURE=AMD64
+INFOPATH=C:\Program Files\Git\mingw64\local\info;C:\Program Files\Git\mingw64\share\info;C:\Program Files\Git\usr\local\info;C:\Program Files\Git\usr\share\info;C:\Program Files\Git\usr\info;C:\Program Files\Git\share\info
+PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+PUBLIC=C:\Users\Public
+TERM_PROGRAM_VERSION=3.8.3
+USERPROFILE=C:\Users\ice9t
+PWD=C:/dev/PythonProjects/DungeonEscape
+CONFIG_SITE=C:/Program Files/Git/etc/config.site
+PROCESSOR_REVISION=9e0a
+OLDPWD=C:/Users/ice9t
+TEMP=C:\Users\ice9t\AppData\Local\Temp
+FPS_BROWSER_APP_PROFILE_STRING=Internet Explorer
+FPS_BROWSER_USER_PROFILE_STRING=Default
+LOGONSERVER=\\DESKTOP-3JOISII
+TERM=xterm-256color
+EFC_12512_1592913036=1
+USERNAME=ice9t
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+GIT_EXEC_PATH=C:/Program Files/Git/mingw64/libexec/git-core
+PLINK_PROTOCOL=ssh
+COMMONPROGRAMFILES=C:\Program Files\Common Files
+_=C:/Program Files/Git/mingw64/bin/git
+EFC_12512_1262719628=1
+PATH=C:/Program Files/Git/mingw64/libexec/git-core;C:\Users\ice9t\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\ice9t\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0;C:\WINDOWS\System32\OpenSSH;C:\Program Files\wureset;C:\Program Files\wooting-analog-sdk;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\Git\cmd;C:\Users\ice9t\AppData\Local\Programs\Python\Python313\Scripts;C:\Users\ice9t\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+OneDrive=C:\Users\ice9t\OneDrive
+LOCALAPPDATA=C:\Users\ice9t\AppData\Local
+MSYSTEM_CARCH=x86_64
+CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+PKG_CONFIG_SYSTEM_INCLUDE_PATH=C:/Program Files/Git/mingw64/include
+EFC_12512_2775293581=1
+MINGW_CHOST=x86_64-w64-mingw32
+HOSTNAME=DESKTOP-3JOISII
+HOMEPATH=\Users\ice9t
+DISPLAY=needs-to-be-defined
+OneDriveConsumer=C:\Users\ice9t\OneDrive
+MANPATH=C:\Program Files\Git\mingw64\local\man;C:\Program Files\Git\mingw64\share\man;C:\Program Files\Git\usr\local\man;C:\Program Files\Git\usr\share\man;C:\Program Files\Git\usr\man;C:\Program Files\Git\share\man
+WINDIR=C:\WINDOWS
+USERDOMAIN=DESKTOP-3JOISII
+ALLUSERSPROFILE=C:\ProgramData
+CommonProgramW6432=C:\Program Files\Common Files
+SYSTEMROOT=C:\WINDOWS
+__PSLockDownPolicy=0
+SHELL=C:\Program Files\Git\usr\bin\bash.exe
+PROGRAMFILES=C:\Program Files
+SHLVL=1
+SESSIONNAME=Console
+EFC_12512_2283032206=1
+DriverData=C:\Windows\System32\Drivers\DriverData
+HOMEDRIVE=C:
+GIT_TRACE2_PARENT_SID=09ff2f6f-8e30-468a-a28b-094d97c84fa1
+ACLOCAL_PATH=C:\Program Files\Git\mingw64\share\aclocal;C:\Program Files\Git\usr\share\aclocal
+NUMBER_OF_PROCESSORS=12
+OS=Windows_NT
+MSYSTEM_PREFIX=C:/Program Files/Git/mingw64
+MSYSTEM_CHOST=x86_64-w64-mingw32
+MINGW_PREFIX=C:/Program Files/Git/mingw64
+ORIGINAL_TEMP=C:/Users/ice9t/AppData/Local/Temp
+HOME=C:\Users\ice9t
+ProgramData=C:\ProgramData
+SYSTEMDRIVE=C:
+PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+TMPDIR=C:\Users\ice9t\AppData\Local\Temp
+MINGW_PACKAGE_PREFIX=mingw-w64-x86_64
+PS1=\[\033]0;$TITLEPREFIX:$PWD\007\]\n\[\033[32m\]\u@\h \[\033[35m\]$MSYSTEM \[\033[33m\]\w\[\033[36m\]`__git_ps1`\[\033[0m\]\n$ 
+COMPUTERNAME=DESKTOP-3JOISII
+LC_CTYPE=en_GB.UTF-8
+SSH_ASKPASS=C:/Program Files/Git/mingw64/bin/git-askpass.exe
+COMSPEC=C:\WINDOWS\system32\cmd.exe
+PKG_CONFIG_PATH=C:\Program Files\Git\mingw64\lib\pkgconfig;C:\Program Files\Git\mingw64\share\pkgconfig
+EFC_12512_3789132940=1
+USERDOMAIN_ROAMINGPROFILE=DESKTOP-3JOISII
+EFC_12512_4126798990=1
+PROCESSOR_LEVEL=6
+TERM_PROGRAM=mintty
+
+
+------------
+Diagnostic: File system
+Skipped: False
+Success: True
+Exception: None
+Log:
+Temporary directory is 'C:\Users\ice9t\AppData\Local\Temp\'...
+Checking basic file I/O...
+Writing to temporary file 'C:\Users\ice9t\AppData\Local\Temp\7c7543a594ea91f32dcb7809'... OK
+Reading from temporary file 'C:\Users\ice9t\AppData\Local\Temp\7c7543a594ea91f32dcb7809'... OK
+Deleting temporary file 'C:\Users\ice9t\AppData\Local\Temp\7c7543a594ea91f32dcb7809'... OK
+Testing IFileSystem instance...
+UserHomePath: C:\Users\ice9t
+UserDataDirectoryPath: C:\Users\ice9t\.gcm
+GetCurrentDirectory(): C:\dev\PythonProjects\DungeonEscape
+
+------------
+Diagnostic: Networking
+Skipped: False
+Success: True
+Exception: None
+Log:
+Checking networking and HTTP stack...
+Creating HTTP client... OK
+IsNetworkAvailable: True
+Sending HEAD request to http://example.com... OK
+Sending HEAD request to https://example.com... OK
+Acquiring free TCP port... OK
+Testing local HTTP loopback connections...
+Creating new HTTP listener for http://localhost:50351/... OK
+Waiting for loopback connection... OK
+Writing response... OK
+Waiting for response data... OK
+Loopback connection data OK
+
+------------
+Diagnostic: Git
+Skipped: False
+Success: True
+Exception: None
+Log:
+Getting Git version... OK
+Git version is '2.55.0.windows.2'
+Locating current repository...Git repository at 'C:/dev/PythonProjects/DungeonEscape/.git'
+ OK
+Listing all Git configuration... OK
+Git configuration:
+file:C:/Program Files/Git/etc/gitconfig	diff.astextplain.textconv=astextplain
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.clean=git-lfs clean -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.smudge=git-lfs smudge -- %f
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.process=git-lfs filter-process
+file:C:/Program Files/Git/etc/gitconfig	filter.lfs.required=true
+file:C:/Program Files/Git/etc/gitconfig	http.sslbackend=openssl
+file:C:/Program Files/Git/etc/gitconfig	http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+file:C:/Program Files/Git/etc/gitconfig	core.autocrlf=true
+file:C:/Program Files/Git/etc/gitconfig	core.fscache=true
+file:C:/Program Files/Git/etc/gitconfig	core.symlinks=false
+file:C:/Program Files/Git/etc/gitconfig	pull.rebase=false
+file:C:/Program Files/Git/etc/gitconfig	credential.helper=manager
+file:C:/Program Files/Git/etc/gitconfig	credential.https://dev.azure.com.usehttppath=true
+file:C:/Program Files/Git/etc/gitconfig	init.defaultbranch=master
+file:C:/Users/ice9t/.gitconfig	user.name=Thomas Stewart
+file:C:/Users/ice9t/.gitconfig	user.email=mrstewartedu@gmail.com
+file:C:/Users/ice9t/.gitconfig	init.defaultbranch=main
+file:C:/Users/ice9t/.gitconfig	http.sslbackend=schannel
+file:.git/config	core.repositoryformatversion=0
+file:.git/config	core.filemode=false
+file:.git/config	core.bare=false
+file:.git/config	core.logallrefupdates=true
+file:.git/config	core.symlinks=false
+file:.git/config	core.ignorecase=true
+file:.git/config	remote.origin.url=https://github.com/mrstewartedu/DungeonEscape.git
+file:.git/config	remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+
+
+------------
+Diagnostic: Credential storage
+Skipped: False
+Success: True
+Exception: None
+Log:
+ICredentialStore instance is of type: CredentialStore
+Writing test credential... OK
+Reading test credential... OK
+Deleting test credential... OK
+
+------------
+Diagnostic: Microsoft authentication (AAD/MSA)
+Skipped: False
+Success: True
+Exception: None
+Log:
+Broker is not enabled.
+Flow type is: Auto
+Gathering MSAL token cache data... OK
+CacheDirectory: C:\Users\ice9t\AppData\Local\.IdentityService
+CacheFileName: msal.cache
+CacheFilePath: C:\Users\ice9t\AppData\Local\.IdentityService\msal.cache
+Creating cache helper... OK
+Verifying MSAL token cache persistence... OK
+
+------------
+Diagnostic: GitHub API
+Skipped: False
+Success: True
+Exception: None
+Log:
+Using 'https://github.com/' as API target.
+Querying '/meta' endpoint... OK
+
