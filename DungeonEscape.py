@@ -80,7 +80,7 @@ def reset_game(): # Reset all variables to their initial values. Ensure that thi
 
 def keep_player_on_screen():
     player.x = max(0, min(player.x, WIDTH - player.width))
-    player.y = max(0, min(player.y, HEIGHT - player.height))
+    player.y = max(32, min(player.y, HEIGHT - player.height)) # 32px for UI
 
 
 def check_collisions():
@@ -139,11 +139,8 @@ def hunt(): # Moves the monster toward the player
 def draw():
     screen.clear()
     screen.fill(BLACK)
-    screen.draw.filled_rect(
-    door_00.rect,
-    door_00.get_colour()
-)
-    # If the game has ended, only draw the Game Over screen
+
+        # If the game has ended, only draw the Game Over screen
     if game_over:
         screen.draw.text(
             "GAME OVER",
@@ -159,12 +156,26 @@ def draw():
         )
         return
 
-    # Draw the game objects
+    # World
+    # Door
+    screen.draw.filled_rect(
+    door_00.rect,
+    door_00.get_colour()
+    )
+
+    # Player
     screen.draw.filled_rect(player, (BLUE))
+
+    # Enemies
     screen.draw.filled_rect(monster, (GOBLIN_GREEN))
     if has_key == False:
         screen.draw.filled_rect(key, (YELLOW)) # If the player doesn't have the key draw it
 
+    # Draw walls
+    for obstacle in room_00.obstacles:
+        screen.draw.filled_rect(obstacle, WHITE)
+
+    # UI
     # Draw the score
     screen.draw.text(
         f"Score: {score}",
@@ -198,7 +209,6 @@ def draw():
     )
     # If the game has ended, only draw the Game Over screen
         
-
 # -----------------
 # Update
 # -----------------
@@ -241,11 +251,25 @@ class Door:
     def enter(self):
         print("Entering door")
         print("Destination:", self.destination_map)
-        
-    
 
-# Map (0, 0)
+class Room: # Each room is a map tile i.e. (0, 0) "container"
+
+    def __init__(self):
+        self.obstacles = []
+        # self.doors = []
+        # self.enemies = []
+        # self.items = []    
+
 # -----------------
+# Room (0, 0)
+# -----------------
+
+room_00 = Room()
+
+room_00.obstacles.append(
+    Rect((0,32),(64,384))
+)
+
 door_00 = Door(
     position=(200,200),
     destination_map=(1,0),
