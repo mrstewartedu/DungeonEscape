@@ -47,6 +47,9 @@ monster = Rect((180, 320), (32, 32))
 # -----------------
 
 def move_player():
+    old_x = player.x
+    old_y = player.y
+
     if keyboard.a:
         player.x -= PLAYER_SPEED
 
@@ -58,6 +61,8 @@ def move_player():
 
     if keyboard.s:
         player.y += PLAYER_SPEED
+
+    check_wall_collisions(old_x, old_y)
 
 def reset_game(): # Reset all variables to their initial values. Ensure that this is updated.
     global score
@@ -82,10 +87,17 @@ def keep_player_on_screen():
     player.x = max(0, min(player.x, WIDTH - player.width))
     player.y = max(32, min(player.y, HEIGHT - player.height)) # 32px for UI
 
+def check_wall_collisions(old_x, old_y):
+    
+    for obstacle in room_00.obstacles:
+
+        if player.colliderect(obstacle):
+            player.x = old_x
+            player.y = old_y
 
 def check_collisions():
     global game_over
-    global health_remaining
+    global health_remaining 
     global last_hit_time
     global has_key
     
@@ -163,10 +175,7 @@ def draw():
     door_00.get_colour()
     )
 
-    # Player
-    screen.draw.filled_rect(player, (BLUE))
-
-    # Enemies
+        # Enemies
     screen.draw.filled_rect(monster, (GOBLIN_GREEN))
     if has_key == False:
         screen.draw.filled_rect(key, (YELLOW)) # If the player doesn't have the key draw it
@@ -175,6 +184,9 @@ def draw():
     for obstacle in room_00.obstacles:
         screen.draw.filled_rect(obstacle, WHITE)
 
+    # Player
+        screen.draw.filled_rect(player, (BLUE))
+    
     # UI
     # Draw the score
     screen.draw.text(
@@ -224,7 +236,6 @@ def update():
         return
 
     move_player()
-    keep_player_on_screen()
     check_collisions()
     hunt()
 
@@ -267,7 +278,10 @@ class Room: # Each room is a map tile i.e. (0, 0) "container"
 room_00 = Room()
 
 room_00.obstacles.append(
-    Rect((0,32),(64,384))
+    Rect((0,32),(64,328)),
+    )
+room_00.obstacles.append(
+    Rect((576,32),(64,328))
 )
 
 door_00 = Door(
