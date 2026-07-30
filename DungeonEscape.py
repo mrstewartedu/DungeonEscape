@@ -89,11 +89,18 @@ def keep_player_on_screen():
 
 def check_wall_collisions(old_x, old_y):
     
-    for obstacle in room_00.obstacles:
+    for obstacle in get_current_room().obstacles:
 
         if player.colliderect(obstacle):
             player.x = old_x
             player.y = old_y
+
+def get_current_room(): # stores current room
+    if current_map == (0,0):
+        return room_00
+
+    if current_map == (1,0):
+        return room_01
 
 def check_collisions():
     global game_over
@@ -110,14 +117,19 @@ def check_collisions():
             health_remaining -= 10 # How do I handle different sources of damage with different values
             last_hit_time = time.time()
     
-    if player.colliderect(door_00.rect):
-        print("Touching door")
+    for door in get_current_room().doors:
+        if player.colliderect(door.rect):
+            print("Touching door")
 
-    if door_00.locked and has_key:
-        if keyboard.f:
-            door_00.unlock()
-            print("door unlocked")
+        if door.locked and has_key:
+            if keyboard.f:
+                door.unlock()
+                print("door unlocked")
 
+        elif not door.locked:
+            if keyboard.f:
+                print("door opened")
+            
     if health_remaining <=0:
             game_over = True
 
@@ -170,9 +182,10 @@ def draw():
 
     # World
     # Door
-    screen.draw.filled_rect(
-    door_00.rect,
-    door_00.get_colour()
+    for door in get_current_room().doors:
+        screen.draw.filled_rect(
+            door.rect,
+            door.get_colour()
     )
 
         # Enemies
@@ -181,11 +194,11 @@ def draw():
         screen.draw.filled_rect(key, (YELLOW)) # If the player doesn't have the key draw it
 
     # Draw walls
-    for obstacle in room_00.obstacles:
+    for obstacle in get_current_room().obstacles:
         screen.draw.filled_rect(obstacle, WHITE)
 
     # Player
-        screen.draw.filled_rect(player, (BLUE))
+    screen.draw.filled_rect(player, (BLUE))
     
     # UI
     # Draw the score
@@ -194,6 +207,14 @@ def draw():
         (10, 10),
         color="white",
         fontsize=30
+    )
+
+    # Shows coordinates of current map/room
+    screen.draw.text(
+    f"Map: {current_map}",
+    (500, 40),
+    color="white",
+    fontsize=30
     )
 
     # Draw the countup timer
@@ -238,6 +259,7 @@ def update():
     move_player()
     check_collisions()
     hunt()
+    keep_player_on_screen()
 
 class Door:
 
@@ -246,50 +268,72 @@ class Door:
         self.locked = True
         self.destination_map = destination_map
         self.destination_position = destination_position
+        self.open = False
 
 
     def unlock(self):
         self.locked = False
 
 
-    def get_colour(self):  # The door determines its color based upon its locked status
+    def get_colour(self):
         if self.locked:
             return RED
         else:
             return GREEN
 
-
-    def enter(self):
-        print("Entering door")
-        print("Destination:", self.destination_map)
-
 class Room: # Each room is a map tile i.e. (0, 0) "container"
 
     def __init__(self):
         self.obstacles = []
-        # self.doors = []
+        self.doors = []
         # self.enemies = []
         # self.items = []    
 
 # -----------------
-# Room (0, 0)
+# Doors
+# -----------------
+
+door_00 = Door(
+    position=(320,32),
+    destination_map=(1,0),
+    destination_position=(320,300),
+)
+
+door_01 = Door(
+    position=(352,320),
+    destination_map=(0,0),
+    destination_position=(320,32),
+)
+
+
+# -----------------
+# Rooms
 # -----------------
 
 room_00 = Room()
 
 room_00.obstacles.append(
-    Rect((0,32),(64,328)),
-    )
+    Rect((0,32),(64,328))
+)
+
 room_00.obstacles.append(
     Rect((576,32),(64,328))
 )
 
-door_00 = Door(
-    position=(200,200),
-    destination_map=(1,0),
-    destination_position=(200,300),
-    )
+room_00.doors.append(door_00)
 
+
+room_01 = Room()
+
+room_01.obstacles.append(
+    Rect((0,32),(640,64))
+)
+
+room_01.obstacles.append(
+    Rect((0,320),(640,352))
+)
+
+room_01.doors.append(door_01)
 # -----------------
 # Start the game
 # -----------------
